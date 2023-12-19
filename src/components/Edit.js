@@ -22,9 +22,8 @@ const EditList = () => {
 
     try {
       const response = await updateItem(id, data);
-      console.log("Create Item Response:", response);
+      console.log("update Item Response:", response);
 
-      // Optionally, you can reset the form after a successful submission
       setData({
         id: new Date().getTime().toString(),
         title: "",

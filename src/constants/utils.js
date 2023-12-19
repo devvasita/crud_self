@@ -30,12 +30,12 @@ export const updateItem = async (id, data) => {
     },
     body: JSON.stringify(data),
   });
-  response.json();
+  return response.json();
 };
 
 export const deleteItem = async (id) => {
   const respone = await fetch(`${BASE_URL}/posts/${id}`, {
     method: "DELETE",
   });
-  respone.json();
+  return respone.json();
 };
